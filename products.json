@@ -2,48 +2,48 @@
    "products":[
       {
          "id":1001,
-         "title":"Cat Food, 25lb bag",
-         "description":"A 25 pound bag of <em>irresistible</em>, organic goodness for your cat.",
-         "price":2000,
+         "title":"Корм для котів, мішок 3 кг",
+         "description":"3-кілограмовий мішок <em>непереборної</em>, органічної користі для вашої кішки.",
+         "price":50000,
          "image":"img/Cat_Food.jpg",
          "availableInventory": 10,
-         "rating":1
+         "rating":3
       },
       {
          "id":1002,
-         "title":"Yarn",
-         "description":"Yarn your cat сап play with for а very <strong>long</strong> time!",
-         "price":299,
+         "title":"Пряжа для котів",
+         "description":"Пряжа, з якою кіт може грати дуже <strong> довго </strong>!",
+         "price":15000,
          "image":"img/Yarn.jpg",
          "availableInventory": 7,
-         "rating":1
+         "rating":4
       },
       {
          "id":1003,
-         "title":"Kitty Litter",
-         "description":"Premium kitty litter for your cat.",
-         "price":1100,
+         "title":"Лоток",
+         "description":"Преміальний лоток для вашого котика.",
+         "price":110000,
          "image":"img/Kitty_Litter.jpg",
          "availableInventory": 99,
          "rating":4
       },
       {
          "id":1004,
-         "title":"Cat House",
-         "description":"А place for your cat to play!",
-         "price":799,
+         "title":"Будинок для котика",
+         "description":"Місце, де ваш кіт може спати і іграти!",
+         "price":200000,
          "image":"img/Cat_House.jpg",
          "availableInventory": 11,
          "rating":5
       },
       {
          "id":1005,
-         "title":"Laser Pointer",
-         "description":"Drive your cat crazy with this <em>amazing</em> product.",
-         "price":4999,
+         "title":"Лазер-вказівка",
+         "description":"Зведіть з розуму свого кота за допомогою цього <em>дивовижного</em> продукту.",
+         "price":10000,
          "image":"img/Laser_Pointer.jpg",
          "availableInventory": 25,
-         "rating":1
+         "rating":5
       }
       
    ]

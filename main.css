@@ -12,6 +12,10 @@ body{
    overflow: auto;
    height: 500px;
 }
+.basket{
+   display: inline-block;
+   padding-bottom: 1px !important;
+}
 .header{
    width: 100% !important;
    position: fixed;
@@ -32,6 +36,7 @@ label > b{
    position: fixed;
    top: 2px;
    padding: 7px 10px !important;
+   cursor: pointer;
 }
 .container-svg{
    display: inline-block;

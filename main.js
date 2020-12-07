@@ -6,10 +6,10 @@ var webstore = new Vue({
       sitename: "Cat`s Shop",
       showProduct: true,
       states:{
-         AL:"Alabama",
-         AR:"Arizona",
-         CA:"California",
-         NV:"Nevada"
+         ЦН:"Центральний",
+         НК:"Новокодацький",
+         СР:"Соборний",
+         СМ:"Самарський"
       },
       order:{
          firstName: "",
@@ -18,12 +18,12 @@ var webstore = new Vue({
          city: "",
          zip: "",
          state: "",
-         method: "Home Address",
-         business: "Business Address",
-         home: "Home Address",
-         gift: "Send As A Gift",
-         sendGift: "Send As A Gift",
-         dontSendGift: "Do Not Send As a Gift"
+         method: "Дім",
+         business: "Робота",
+         home: "Дім",
+         gift: "Відправити як подарунок",
+         sendGift: "Відправити як подарунок",
+         dontSendGift: "Не відправляти як подарунок"
       },
       products:[],
       cart:[],
@@ -43,10 +43,10 @@ var webstore = new Vue({
                console.log(priceArray);
                index += 4;
             }
-            return "$" + priceArray.reverse().join("");
+            return priceArray.reverse().join("") + "грн";
          }
          else{
-            return "$" + (price/100).toFixed(2);
+            return (price/100).toFixed(2) + "грн";
          }
       }
    },created:function(){
@@ -68,7 +68,7 @@ var webstore = new Vue({
 
       },
       submitForm(){
-         alert('Submitted');
+         alert('Підтверджено');
          this.cart = [];
       },
       checkRating(n,  myProduct){

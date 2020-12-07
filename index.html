@@ -19,7 +19,7 @@
          <div class="modal-dialog" role="document">
             <div class="modal-content">
                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                  <h5 class="modal-title" id="exampleModalLongTitle">Модальне вікно</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                      <span aria-hidden="true">&times;</span>
                   </button>
@@ -27,61 +27,61 @@
                <div class="modal-body">
                   <form class="col-12 ml-auto mr-auto mt-" id="UserData">
                      <div class="form-group ">
-                        <span class="title">Enter Your Information</span>
-                        <label for="formGroupExampleInput"><b>F</b>irstName:</label>
+                        <span class="title">Введіть вашу інформацію</span> <br>
+                        <label for="formGroupExampleInput"><b>І</b>м'я:</label>
                         <input type="text" v-model.trim.lazy="order.firstName" aria-label="First name" class="form-control">
                      </div>
                      <div class="form-group">
-                        <label for="formGroupExampleInput2"> <b>L</b>astName:</label>
+                        <label for="formGroupExampleInput2"> <b>П</b>різвище:</label>
                         <input type="text" v-model.trim.lazy="order.lastName" aria-label="Last name" class="form-control">
                      </div>
                      <div class="form-group">
-                        <label for="formGroupExampleInput"><b>A</b>ddress:</label>
+                        <label for="formGroupExampleInput"><b>А</b>дреса:</label>
                         <input type="text" v-model.trim="order.address"class="form-control" id="formGroupExampleInput" >
                      </div>
                      <div class="form-group">
-                        <label for="formGroupExampleInput"><b>C</b>ity:</label>
+                        <label for="formGroupExampleInput"><b>М</b>істо:</label>
                         <input type="text" v-model.trim="order.city" class="form-control" id="formGroupExampleInput" >
                      </div>
                      <div class="form-row p-1">
                         <select class="mt-4" name="States" id="selectState" v-model="order.state">
-                           <option value="" disabled>State</option>
+                           <option value="" disabled>Район</option>
                            <option v-for="(state,key) in states" v-bind:value="state">{{key}}</option>
                         </select>
                         <div class="form-group col-4 ml-auto">
-                           <label for="formGroupExampleInput"><b>Z</b>IP/<b>P</b>OSTAL CODE</label>
+                           <label for="formGroupExampleInput"><b>П</b>очтовий індекс</label>
                            <input type="text" v-model.number="order.zip" class="form-control" id="formGroupExampleInput" >
                         </div>
                      </div>
                      <div class="form-row p-1">
                         <div class="form-group">
                            <input type="checkbox" id="gift" value="true" v-bind:true-value="order.sendGift" v-bind:false-value="order.dontSendGift" v-model="order.gift">
-                           <label for="gift">Shift As Gift ?</label>
+                           <label for="gift">Відправити як подарунок ?</label>
                         </div>
                         <div class="form-group ml-auto">
                            <input type="radio" id="home" value="Home" v-bind:value="order.home" v-model="order.method">
-                           <label for="home">Home</label>
+                           <label for="home">Дім</label>
                            <input type="radio" id="business" value="Business" v-bind:value="order.business" v-model="order.method">
-                           <label for="business">Business</label>
+                           <label for="business">Робота</label>
                         </div>
                      </div>
                   </form>
                   <div class="bill" >
                      <pre>
-            First Name: {{order.firstName}}
-            Last Name: {{order.lastName}}
-            Address: {{order.address}}
-            City: {{order.city}}
-            Zip: {{order.zip}}
-            State: {{order.state}}
-            Method: {{order.method}}
-            Gift: {{order.gift}}
+            Ім'я: {{order.firstName}}
+            Прізвище: {{order.lastName}}
+            Адреса: {{order.address}}
+            Місто: {{order.city}}
+            Індекс: {{order.zip}}
+            Район: {{order.state}}
+            Місце куди відправити: {{order.method}}
+            Подарунок: {{order.gift}}
                      </pre>
                   </div>
                </div>
                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary"  data-dismiss="modal" v-on:click="submitForm()">Checkout</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрити</button>
+                  <button type="button" class="btn btn-primary"  data-dismiss="modal" v-on:click="submitForm()">Придбати</button>
 
                </div>
             </div>
@@ -91,13 +91,13 @@
          <nav class="navbar bg-dark text-white">
             <h1 v-text="sitename"></h1>
             <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong1" >
-               <span>
+               <span class="basket">
                   <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-archive" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                      <path fill-rule="evenodd" d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1V2zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5H2zm13-3H1v2h14V2zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/>
                   </svg>
                   {{cartItemCount}}
                </span>
-               Checkout
+               Кошик
             </button>
          </nav>
       </header>
@@ -106,7 +106,7 @@
             <div class="modal-dialog" role="document">
                <div class="modal-content">
                   <div class="modal-header">
-                     <h5 class="modal-title" id="exampleModalLongTitle">Cart</h5>
+                     <h5 class="modal-title" id="exampleModalLongTitle">Кошик</h5>
                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                      </button>
@@ -129,11 +129,11 @@
                      </div>
                   </div>
                   <div class="modal-body" v-else>
-                  <p class="text-center">EMPTY CART</p>
+                  <p class="text-center">Пустий кошик</p>
                   </div>
                   <div class="modal-footer">
-                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong" v-if="cart.length != 0" data-dismiss="modal">Checkout</button>
+                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрити</button>
+                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong" v-if="cart.length != 0" data-dismiss="modal">Кошик</button>
                   </div>
                </div>
             </div>
@@ -159,17 +159,17 @@
                               {{product.price | formatPrice}}
                            </p>
                            <button type="button" class="btn btn-success" v-on:click="addToCart(product)" v-if="canAddToCart(product)">
-                              Add to cart
+                              Додати до кошика
                            </button>
-                           <button type="button" class="btn btn-danger" v-else>Add to cart</button>
+                           <button type="button" class="btn btn-danger" v-else>Додати до кошика</button>
                            <span class="inventory-message alert alert-danger" v-if="product.availableInventory - cartCount(product.id) === 0">
-                              All Out !
+                              Закінчився !
                            </span>
                            <span class="inventory-message alert alert-danger" v-else-if="product.availableInventory - cartCount(product.id) < 5">
-                              Only {{product.availableInventory - cartCount(product.id)}} left !
+                              Тільки {{product.availableInventory - cartCount(product.id)}} залишилося !
                            </span>
                            <span class="inventory-message alert alert-danger" v-else data-toggle="modal" data-target="#exampleModalLong">
-                              Buy Now !
+                              Купити швидко !
                            </span>
                            <div class="container-svg" v-bind:class="{'rating-active': checkRating(n, product)}" v-for="n in 5">
                               <svg  width="1em"  height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor"  xmlns="http://www.w3.org/2000/svg">
